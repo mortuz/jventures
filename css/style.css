@@ -246,13 +246,14 @@ img{
     min-height: 200px;
     box-shadow: 3px 3px 8px 0px rgba(0,0,0, 0.1);
     margin: auto;
-    background-color: #fff;
+    /* background-color: #fff; */
+    border-image: radial-gradient(rgba(0,0,0,0.08),transparent) .5;
 }
 .item-content {
     position: absolute;
     top: 0;
     left: 0;
-    border: 1px solid #dadada;
+    /* border: 1px solid #dadada; */
     padding: 1rem;
     width: 100%;
     max-width: 100%;
