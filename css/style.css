@@ -3,7 +3,8 @@
 :root {
     --primary-color: #fc6363;
     --secondary-color:#5b757f;
-    --white-color:#fff;
+    --light-color:#eaeaea;
+    --small-g-color: #3d4b51;
 }
 
 body{
@@ -15,6 +16,27 @@ body{
 #topnav ul li a{
     color:white;
 }
+
+.logo{
+    height: 100px;
+}
+
+.logofoot{
+    height: 150px;
+}
+
+.heading-text{
+    color: var(--primary-color);
+}
+
+.small-text{
+    color:var(--secondary-color);
+}
+
+.light-text{
+    color:var(--light-color);
+}
+
 
 .btn-cta{
     color:#fc6363;
@@ -61,6 +83,8 @@ body{
     top: 0;
     left: 0;
     right: 0;
+    z-index: -1;
+    bottom: 0;
 }
 
 .vertical-center {
@@ -163,4 +187,9 @@ img{
     flex: 1 1 25%;
     margin: 1rem;
     width: 25%;
+}
+
+
+#footer a {
+    color: var(--light-color);
 }
