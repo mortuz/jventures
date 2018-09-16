@@ -9,6 +9,10 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+p {
+    line-height: 1.8;
 }
 .box{
     border: 1px solid red;
@@ -56,6 +60,14 @@ body{
     left: 0;
     right: 0;
     z-index: -1;
+}
+
+.logo-pat{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 150px;
+    left: 0;
 }
 
 .pat1{
