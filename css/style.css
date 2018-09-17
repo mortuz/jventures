@@ -435,7 +435,6 @@ img{
 .people-content .title {
     font-size: 22px;
     font-weight: 700;
-    color: #4e5052;
     letter-spacing: 1px;
     text-transform: capitalize;
     margin-bottom: 5px;
@@ -443,7 +442,6 @@ img{
 .people-content .post {
     display: block;
     font-size: 15px;
-    color: #4e5052;
     text-transform: capitalize;
 }
 .people-info {
@@ -457,6 +455,10 @@ img{
 .people:hover .people-info {
     transform: translateY(-100px);
     opacity: 1;
+}
+.people:hover .people-content {
+    /* transform: translateY(-100px); */
+    opacity: 0;
 }
 .people .social {
     width: 100%;
@@ -583,4 +585,21 @@ img{
     background: linear-gradient(90deg, rgba(248,126,51,1) 0%, rgba(252,99,99,1) 100%);
     z-index: -1;
     transform: rotate(-4deg);
+}
+
+.case-tabs a{
+       color: #dadada;
+}
+
+.case-tabs a.active{
+       color: var(--secondary-color);
+}
+
+.card{
+    border-color: transparent;
+}
+
+#case-studies .item {
+    box-shadow: 4px 4px 11px rgba(0,0,0, 0.1); 
+    margin-bottom: 10px;
 }
