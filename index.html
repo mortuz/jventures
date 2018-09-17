@@ -201,7 +201,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 offset-md-3 text-center">
-                <div class="owl-carousel js-brands mt-5">
+                <div class="owl-carousel owl-theme js-brands mt-5">
                     <div> <img src="./img/client/1.png" alt=""></div>
                     <div> <img src="./img/client/2.png" alt=""> </div>
                     <div> <img src="./img/client/3.png" alt=""> </div>
@@ -387,7 +387,7 @@
                 </ul>
             </div>
             <div class="col-md-10">
-                <div class="owl-carousel js-case-studies">
+                <div class="owl-carousel owl-theme js-case-studies">
 
                     <div class="item">
                         <div class="card">
@@ -416,7 +416,7 @@
                 <h3 class="heading-text mb-5">News &amp; Blog</h3>
             </div>
             <div class="col-md-12">
-                <div class="owl-carousel js-blog">
+                <div class="owl-carousel owl-theme js-blog">
                     <div class="item text-center">
                         <!-- Featured image -->
                         <div class="view overlay rounded z-depth-2 mb-4">
@@ -455,7 +455,7 @@
                 <h3 class="heading-text">Our team</h3>
             </div>
         </div>
-        <div class="owl-carousel js-team-carousel">
+        <div class="owl-carousel owl-theme js-team-carousel">
             <div class="item">
                 <div class="people">
                     <div class="pic">
@@ -609,7 +609,7 @@
     
     <script>
         $(document).ready(function () {
-            // $(".owl-carousel").owlCarousel();
+            // $(".owl-carousel owl-theme").owlCarousel();
             
             // partners
             $('.js-partners').owlCarousel({
@@ -641,6 +641,8 @@
             $('.js-brands').owlCarousel({
                 autoplay: true,
                 loop: true,
+                dots: true,
+                // nav: true,
                 margin: 10,
                 responsiveClass: true,
                 responsive: {
