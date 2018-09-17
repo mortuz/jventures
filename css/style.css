@@ -63,7 +63,7 @@ p {
 }
 .polygon {
     width: 100vw;
-    height: 90vh;
+    height: 98vh;
     /* background-color:  var(--primary-color); */
     background: rgb(248,126,51);
     background: linear-gradient(90deg, rgba(248,126,51,1) 0%, rgba(252,99,99,1) 100%);
@@ -306,10 +306,10 @@ img{
 #solutions:before {
     content: '';
     width: 120vw;
-    height: 115%;
+    height: 120%;
     position: absolute;
     display: block;
-    top: 0;
+    top: -47px;
     left: -10%;
     background-color: #f8fafc;
     z-index: -1;
