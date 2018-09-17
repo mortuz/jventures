@@ -471,7 +471,9 @@
             </div>
 
             <div class="col-md-2">
-                <p class="heading-text verticle-more">More <i class="fa fa-long-arrow-right ml-3" aria-hidden="true"></i></p>
+                <p class="heading-text verticle-more">
+                    <a href="#" class="js-more more-btn">More <i class="fa fa-long-arrow-right ml-3" aria-hidden="true"></i></a>
+                </p>
             </div>
         </div>
     </div>
@@ -575,7 +577,23 @@
             <div class="col-md-6">
                 <div class="card contact-card">
                     <div class="card-body">
-                        <h3 class="heading-text">Get in Touch</h3>
+                        <ul class="nav nav-pills contact-tab nav-fill">
+                            <li class="nav-item text-left">
+                                <a class="nav-link active" href="#">Get in touch</a>
+                            </li>
+                            <li class="nav-item text-right">
+                                <a class="nav-link" href="#">Career</a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="nav case-tabs mt-4 mb-5">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Advertiser</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Publisher</a>
+                            </li>
+                        </ul>
                         <form action="#">
                             <div class="form-input">
                                 <label>
@@ -794,6 +812,11 @@
                     }
                 }
             })
+
+            $('.js-more').on('click', function(e){
+                e.preventDefault();
+                $('.case-more-nav').find('.owl-next').click();
+            });
         });
     </script>
 

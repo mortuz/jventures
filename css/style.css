@@ -149,6 +149,10 @@ p {
     justify-content: center;
     display: flex;
 }
+.verticle-more .more-btn {
+    text-decoration: none;
+    color: var(--primary-color);
+}
 
 .height-500 {
     min-height: 600px;
@@ -315,6 +319,7 @@ img{
     z-index: -1;
     transform: rotate(-4deg);
 }
+
 @media (max-width: 1199px) {
     #topnav {
         background-color: #fff;
@@ -645,4 +650,15 @@ img{
 
 .case-more-nav{
     display: none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--primary-color);
+    background-color: transparent;
+    font-size: 1.6rem;
+}
+.contact-tab .nav-link:not(.active) {
+        color: var(--secondary-color);
+        font-size: 1.6rem;
+        transform: scale(0.7);
 }
