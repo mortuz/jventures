@@ -449,6 +449,42 @@
     </div>
 </section>
 
+<section id="team" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h3 class="heading-text">Our team</h3>
+            </div>
+        </div>
+        <div class="owl-carousel js-team-carousel">
+            <div class="item">
+                <div class="people">
+                    <div class="pic">
+                        <img src="https://placekitten.com/g/300/300" alt="kitty">
+                    </div>
+
+                    <div class="people-content">
+                        <h3 class="title">John Doe</h3>
+                        <span class="post">Web Developer</span>
+                    </div>
+
+                    <div class="people-info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dolor ratione laboriosam mollitia consectetur omnis ullam totam, dicta tenetur voluptate.
+                    </div>
+
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <footer id="footer" class="bg-dark py-5">
     <div class="container">
@@ -597,6 +633,25 @@
                         items: 3,
                         margin: 20
                     }
+                }
+            });
+
+            $('.js-team-carousel').owlCarousel({
+                autoplay: true,
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 3,
+                    },
+                    // 1000: {
+                    //     items: 4,
+                    //     margin: 20
+                    // }
                 }
             })
         });
