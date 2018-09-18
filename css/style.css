@@ -5,6 +5,8 @@
     --secondary-color:#5b757f;
     --light-color:#eaeaea;
     --small-g-color: #3d4b51;
+    --box-shadow:  4px 7px 58px 0px rgba(111,111,111,0.2);
+    /* --box-shadow:  4px 7px 58px 0px rgba(8,113,222,0.2); */
 }
 
 body{
@@ -268,10 +270,11 @@ img{
     margin: 1rem;
     max-width: 250px;
     min-height: 200px;
-    box-shadow: 3px 3px 8px 0px rgba(0,0,0, 0.1);
+    box-shadow: var(--box-shadow);
     margin: auto;
-    /* background-color: #fff; */
+    background-color: #fff;
     border-image: radial-gradient(rgba(0,0,0,0.08),transparent) .5;
+    border-radius: 10px;
 }
 .item-content {
     position: absolute;
@@ -289,7 +292,7 @@ img{
     transition: all 0.3s;
 }
 .item-content img {
-    width: 50px;
+    height:40px;
     margin: auto;
 }
 .item .item-front, .item .item-back, {
@@ -400,7 +403,7 @@ img{
     z-index: -1;
     transform: rotate(-4deg);
 }
-.people {
+/* .people {
     padding: 1rem 0 1.5rem;
     text-align: center;
     overflow: hidden;
@@ -416,7 +419,6 @@ img{
     width: 180px;
     height: 180px;
     margin-bottom: 50px;
-    /* background: var(--primary-color); */
     position: relative;
     z-index: 1;
 }
@@ -486,7 +488,6 @@ img{
     opacity: 1;
 }
 .people:hover .people-content {
-    /* transform: translateY(-100px); */
     opacity: 0;
 }
 .people .social {
@@ -518,8 +519,96 @@ img{
     color: var(--primary-color);
     background: #f7f5ec;
     text-decoration: none;
+} */
+#team .item {
+    margin: 5px 10px 40px 5px;
+}
+.people {
+    /* border: 1px solid rgba(0,0,0, 0.1); */
+    box-shadow: var(--box-shadow);
+}
+.people-content {
+    position: relative;
+    /* overflow: hidden; */
+}
+.people img {
+    /* transition: opacity 0.3s ease; */
+}
+.people:hover img {
+    opacity: 0;
+}
+.people:hover .people-img {
+    height: auto;
+}
+.people:hover .people-content {
+    height: 200px;
+}
+.people-img {
+    position: relative;
+    overflow: hidden;
+    background: url(https://media.tenor.com/images/a1228ad71951d963835e3ed1f2514cdc/tenor.gif) center center no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+.people-img:before {
+    content: '';
+    width: 200%;
+    height: 30%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-10deg);
+    transition: all 0s;
+    left: -1%;
+}
+.people-content {
+    padding: 10px;
+    text-align: center;
+    height: 130px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.people-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.people-content .info, 
+.people-content .description {
+    position: absolute;
+    width: calc(100% - 20px);
 }
 
+.people-content .info {
+    opacity: 1;
+    background-color: #fff;
+    transform: translateY(0px);
+}
+.people-content .description {
+    opacity: 0;
+    background-color: #fff;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+}
+.people:hover .people-content .info {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+}
+.people:hover .people-content .description {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.people-content .designation {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+/* .owl-stage-outer { 
+    padding: 30px;
+    margin: 30px;
+} */
 /* input */
 .form-input {
   margin: 40px 0;
@@ -584,7 +673,7 @@ img{
 /*  contact form */
 .contact-card {
     padding: 1rem 2rem;
-    box-shadow: 4px 4px 11px rgba(0,0,0, 0.3);
+    box-shadow: var(--box-shadow);
 }
 #contact {
     position: relative;
@@ -629,9 +718,33 @@ img{
 }
 
 #case-studies .item {
-    box-shadow: 4px 4px 11px rgba(0,0,0, 0.1); 
-    margin-bottom: 10px;
+    box-shadow: var(--box-shadow); 
+    margin: 35px;
+    border-radius: 10px;
+    overflow: hidden;
 }
+#case-studies .btn {
+    font-size: 12px;
+}
+
+.btn-rounded{
+    border-radius: 50px;
+}
+
+.btn-outline-primary{
+    background-color: #ffefe8;
+    color: #fc6363;
+    border-color: transparent;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:active{
+    color: #ffefe8;
+    background-color: #fc6363;
+    border-color: transparent;
+}
+
 .owl-theme .owl-controls .owl-page {
     display: inline-block;
 }
