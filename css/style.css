@@ -56,6 +56,7 @@ p {
 .header {
     position: relative;
     min-height: 100vh;
+    /* background: linear-gradient(90deg, rgba(248,126,51,1) 0%, rgba(252,99,99,1) 100%); */
 }
 .bg {
     position: absolute;
@@ -521,18 +522,18 @@ img{
     text-decoration: none;
 } */
 #team .item {
-    margin: 5px 10px 40px 5px;
+        margin: 5px 30px 40px 0px;
+    box-shadow: var(--box-shadow);
 }
 .people {
     /* border: 1px solid rgba(0,0,0, 0.1); */
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
+    overflow: hidden;
 }
 .people-content {
     position: relative;
+    background-color: #fff;
     /* overflow: hidden; */
-}
-.people img {
-    /* transition: opacity 0.3s ease; */
 }
 .people:hover img {
     opacity: 0;
