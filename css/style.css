@@ -353,6 +353,9 @@ img{
     .pat1, .pat2 {
         display: none;
     }
+    .hero {
+        padding-top: 5rem;
+    }
 }
 
 .view {
@@ -766,13 +769,16 @@ img{
     display: none;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+#contact .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--primary-color);
     background-color: transparent;
     font-size: 1.6rem;
 }
-.contact-tab .nav-link:not(.active) {
+#contact .contact-tab .nav-link:not(.active) {
         color: var(--secondary-color);
         font-size: 1.6rem;
         transform: scale(0.7);
+}
+video {
+    max-width: 100%;
 }
