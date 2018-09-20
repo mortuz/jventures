@@ -8,11 +8,90 @@
     --box-shadow:  4px 7px 58px 0px rgba(111,111,111,0.2);
     /* --box-shadow:  4px 7px 58px 0px rgba(8,113,222,0.2); */
 }
-
+.loader {
+    position: fixed;
+    z-index: 999999999999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.loader svg {
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.loader svg #v {
+    transform: rotateX(360deg);
+    transform-origin: 11%;
+    animation: spin 4s infinite;
+}
+.loader svg #e {
+    transform: rotateX(360deg);
+    transform-origin: 22%;
+    animation: spin 4s 0.25s infinite;
+}
+.loader svg #n {
+    transform: rotateX(360deg);
+    transform-origin: 33%;
+    animation: spin 4s 0.5s infinite;
+}
+.loader svg #t {
+    transform: rotateX(360deg);
+    transform-origin: 44%;
+    animation: spin 4s 0.75s infinite;
+}
+.loader svg #u {
+    transform: rotateX(360deg);
+    transform-origin: 58%;
+    animation: spin 4s 1s infinite;
+}
+.loader svg #r {
+    transform: rotateX(360deg);
+    transform-origin: 68%;
+    animation: spin 4s 1.25s infinite;
+}
+.loader svg #e2 {
+    transform: rotateX(360deg);
+    transform-origin: 80%;
+    animation: spin 4s 1.5s infinite;
+}
+.loader svg #s {
+    transform: rotateX(360deg);
+    transform-origin: 91%;
+    animation: spin 4s 1.75s infinite;
+}
+@keyframes spin {
+    /* 100% {
+        transform: rotateY(0deg);
+    }
+    75% {
+        transform: rotateY(180deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    25% {
+        transform: rotateY(360deg);
+    }
+    0% {
+        transform: rotateY(360deg)
+    } */
+    from {
+        transform: rotateY(360deg)
+    }
+    50%,to {
+        transform: rotateY(0deg)
+    }
+}
 body{
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 p {
     line-height: 1.8;
