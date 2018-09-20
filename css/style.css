@@ -373,7 +373,7 @@ img{
 }
 .item-content img {
     height:40px;
-    margin: auto;
+    margin: 20px auto;
 }
 .item .item-front, .item .item-back, {
     position: absolute;
