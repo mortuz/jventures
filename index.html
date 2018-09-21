@@ -1592,14 +1592,26 @@
                 
 
                             <form action="#" class="active-form" method="post" id="contact-form">
-                                <ul class="nav case-tabs js-get-in-touch-type mt-4 mb-5">
+                                <!-- <ul class="nav case-tabs js-get-in-touch-type mt-4 mb-5">
                                     <li class="nav-item">
                                         <a class="nav-link active" href="#">Advertiser</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Publisher</a>
                                     </li>
-                                </ul>
+                                </ul> -->
+                                <p class="mb-0">I am a</p>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" name="get-in-touch-type" type="radio" id="advertiser" value="advertiser" checked>
+                                    <label class="form-check-label" for="advertiser">Advertiser</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" name="get-in-touch-type" type="radio" id="publisher" value="option2">
+                                    <label class="form-check-label" for="publisher">Publisher</label>
+                                </div>
+
+
                                 <input type="hidden" name="get-in-touch-type" id="get-in-touch-type">
                                 <div class="form-input">
                                     <label>

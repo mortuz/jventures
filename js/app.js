@@ -140,7 +140,6 @@ $(document).ready(function () {
         $(".js-get-in-touch-type").find('.nav-link').removeClass('active');
         $(this).addClass('active');
         $("#get-in-touch-type").val($(this).text());
-        console.log($('this'));
     });
 
     $(".contact-tab").on('click', '.nav-link', function (e) {
@@ -153,8 +152,8 @@ $(document).ready(function () {
 
         var formId = $(this).attr('data-form');
 
-        $(".active-form").removeClass('active-form').fadeOut();
-        $("#" + formId).addClass('active-form').fadeIn();
+        $(".active-form").removeClass('active-form').hide();
+        $("#" + formId).addClass('active-form').show();
     });
 
     // smooth scroll
@@ -180,5 +179,5 @@ $(document).ready(function () {
     });
 
     // init
-    $('#career-form').fadeOut();
+    $('#career-form').hide();
 });

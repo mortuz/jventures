@@ -446,7 +446,7 @@ img{
 }
 
 #team .item {
-        margin: 5px 30px 40px 0px;
+    margin: 35px 30px 40px 0px;
     box-shadow: var(--box-shadow);
 }
 .people {
@@ -599,7 +599,8 @@ img{
 /*  contact form */
 .contact-card {
     padding: 1rem 2rem;
-    box-shadow: var(--box-shadow);
+    box-shadow: 4px 7px 37px 0px rgba(0, 0, 0, 0.29);
+    min-height: 780px;
 }
 #contact {
     position: relative;
@@ -858,6 +859,12 @@ video {
 
 
 /* experiment */
+input[type='radio'] + label {
+    color: #BDBDBD;
+}
+input[type='radio']:checked + label {
+    color: #212529;
+}
 
 #footer {
     padding-top: 5rem;
@@ -866,6 +873,15 @@ video {
 
 .white-hr{
     border-top-color: #7b7d8f2b;
+}
+
+@media (max-width: 767px) {
+    .verticle-more {
+        height: auto;
+        text-align: right;
+        justify-content: flex-end;
+        margin-right: 1rem;
+    }
 }
 
 @media (max-width: 559px) {
