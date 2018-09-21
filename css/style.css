@@ -359,6 +359,7 @@ img{
         width: 100%;
         left: 0;
         z-index: 999999;
+        box-shadow: 2px 0px 58px 1px rgba(0,0,0,0.1);
     }
     .logo-pat {
         display: none;
@@ -574,10 +575,6 @@ img{
   outline: none;
   padding: 0;
   margin: 0;
-}
-.form-input textarea {
-  /* min-height: 30px; */
-  padding: 8px 0;
 }
 .form-input input {
   height: 30px;
@@ -864,9 +861,72 @@ video {
 
 #footer {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
 }
 
 .white-hr{
     border-top-color: #7b7d8f2b;
+}
+
+@media (max-width: 559px) {
+    #who-are-we {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    #what-we-do {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    #brands {
+        position: relative;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    #brands img {
+        transform: scale(0.7);  
+    }
+    #brands .mt-5 {
+        margin-top: 1rem!important;
+    }
+    #solutions {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+    #ads {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    #case-studies {
+        padding-bottom: 2rem;
+    }
+    #case-studies .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+    .verticle-more {
+        height: auto;
+        text-align: right;
+        justify-content: flex-end;
+        margin-right: 1rem;
+    }
+
+    #blog {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    #team {
+        padding-top: 2rem;
+        min-height: 600px;
+    }
+
+    #contact {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    #contact .mt-5 {
+        margin-top: 0 !important;
+    }
+    #contact .text-right,
+    #contact .text-left {
+        text-align: center !important;
+    }
 }
