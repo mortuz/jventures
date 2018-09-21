@@ -209,9 +209,10 @@ p {
     max-width: 15%;
 }
 
-.brands1{
+#brands{
     position: relative;
-    padding-bottom: 250px;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
 
 }
 
@@ -243,7 +244,14 @@ p {
 .height-500 {
     min-height: 600px;
 }
-
+#who-are-we {
+    padding-top: 7rem; 
+    padding-bottom: 7rem; 
+}
+#what-we-do {
+    padding-top: 7rem; 
+    padding-bottom: 7rem; 
+}
 .content {
     display: flex;
     justify-content: center;
@@ -281,6 +289,22 @@ img{
     color: var(--light-color);
 }
 /* flipping cards */
+#solutions {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+#solutions:before {
+    content: '';
+    width: 120vw;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: -10%;
+    background-color: #f8fafc;
+    z-index: -1;
+    transform: rotate(-4deg);
+}
 #solutions .item {
     position: relative;
     margin: 1rem;
@@ -326,19 +350,6 @@ img{
     transform: rotateY(0deg);
     opacity: 1;
 }
-#solutions:before {
-    content: '';
-    width: 120vw;
-    height: 120%;
-    position: absolute;
-    display: block;
-    top: -47px;
-    left: -10%;
-    background-color: #f8fafc;
-    z-index: -1;
-    transform: rotate(-4deg);
-}
-
 @media (max-width: 1199px) {
     #topnav {
         background-color: #fff;
@@ -808,6 +819,10 @@ video {
     max-width: 100%;
 }
 
+#ads {
+    padding-top: 7rem; 
+    padding-bottom: 7rem; 
+}
 
 #ads video{
     max-height: 400px;
@@ -831,6 +846,7 @@ video {
     box-shadow: 0 2px 5px 0 hsla(0,0%,85%,.6);
     font-size: 14px;
     background-color: #fff;
+    margin-top: 15px;
 }
 #ads .nav-pills .nav-link {
     color: #fb655e;
@@ -839,7 +855,7 @@ video {
     margin-right: 5px;
     font-size: 14px;
     border-radius: 4px;
-    /* box-shadow: 0 2px 5px 0 hsla(0,0%,85%,.6); */
+    margin-top: 15px;
 }
 #ads .nav-pills .nav-link.active {
     background-color: #fb655e;
@@ -938,8 +954,14 @@ video {
 }
 
 
+#case-studies {
+    padding-bottom: 5rem;
+}
 
-
+#blog {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
 
 
 /* experiment */
@@ -947,5 +969,4 @@ video {
 
 .white-hr{
     border-top-color: #7b7d8f2b;
-
 }
