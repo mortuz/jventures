@@ -157,7 +157,7 @@ $(document).ready(function () {
     });
 
     // smooth scroll
-    $("#topnav").on('click', 'a', function (event) {
+    $("#topnav, .footer-nav").on('click', 'a', function (event) {
 
         if (this.hash !== "") {
             event.preventDefault();
