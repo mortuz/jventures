@@ -212,7 +212,7 @@ p {
 #brands{
     position: relative;
     padding-top: 7rem;
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
 
 }
 
@@ -304,7 +304,7 @@ img{
     /* left: -10%; */
     background-color: #f8fafc;
     z-index: -1;
-    transform: skewY(-6deg);
+    transform: skewY(-4deg);
 }
 #solutions .item {
     position: relative;
@@ -627,7 +627,7 @@ img{
     background: rgb(248,126,51);
     background: linear-gradient(90deg, rgba(248,126,51,1) 0%, rgba(252,99,99,1) 100%);
     z-index: -1;
-    transform: skewY(-6deg);
+    transform: skewY(-4deg);
 }
 /* .btn-gradient:hover {
     box-shadow: 4px 4px 11px rgba(0,0,0, 0.3);
