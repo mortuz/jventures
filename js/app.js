@@ -180,4 +180,10 @@ $(document).ready(function () {
 
     // init
     $('#career-form').hide();
+
+    // scroll detection
+    $(window).on('scroll', function() {
+        console.log('scrolled');
+        var vScroll = $(window);
+    })
 });
