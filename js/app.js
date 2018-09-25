@@ -77,7 +77,7 @@ $(document).ready(function () {
     $('.js-case-studies').owlCarousel({
         autoplay: true,
         loop: true,
-        // margin: 10,
+        margin: 20,
         nav: true,
         navContainerClass: 'owl-nav case-more-nav',
         responsiveClass: true,
