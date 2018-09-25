@@ -252,20 +252,13 @@ $(document).ready(function () {
             $('body').addClass('scrolled');
 
             var solutionSectionScroll = $('#solutions').offset().top;
-            // var solutionSectionScroll = $('#solutions').offset().top;
 
 
-            // check if about section
+            // check if solution section
             if (vScroll > solutionSectionScroll - $(window).height() / 2) {
                 console.log('solution is visible');
                 $(".item").addClass('animated fadeInBottom');
-                // $(".what-we-do-image").addClass("animated fadeInRight");
             }
-
-            // check if solutions section
-            // if (vScroll > solutionSectionScroll - $(window).height() / 2) {
-            //     console.log("solution is visible");
-            // }
 
         } else {
             $("body").removeClass("scrolled");
