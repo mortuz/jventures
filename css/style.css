@@ -665,7 +665,7 @@ img{
 
 #case-studies .item {
     box-shadow: var(--box-shadow); 
-    margin: 35px;
+    margin: 20px;
     border-radius: 10px;
     overflow: hidden;
 }
