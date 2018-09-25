@@ -6,6 +6,8 @@ $(window).on('load', function () {
 
 $(document).ready(function () {
 
+    var activeTab = 'inmobi';
+
 
     // $(".owl-carousel owl-theme").owlCarousel();
     function windowResized() {
@@ -183,7 +185,37 @@ $(document).ready(function () {
 
     // scroll detection
     $(window).on('scroll', function() {
-        console.log('scrolled');
-        var vScroll = $(window);
+        var vScroll = $(window).scrollTop();
+
+        if (vScroll > 50) {
+            $('body').addClass('scrolled');
+
+            var aboutSectionScroll = $('#who-are-we').offset().top;
+            var solutionSectionScroll = $('#solutions').offset().top;
+
+
+            // check if about section
+            if (vScroll > aboutSectionScroll - $(window).height()/2) {
+                console.log('about is visible');
+                $(".who-are-we-big-image").addClass('animated fadeInLeft');
+            }
+
+            // check if solutions section
+            if (vScroll > solutionSectionScroll - $(window).height() / 2) {
+                console.log("solution is visible");
+            }
+
+        } else {
+            $("body").removeClass("scrolled");
+        }
+
+        // 
+        // section scroll detection
+    })
+
+    // scrollspy
+    $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+        // do something…
+        console.log($(this));
     })
 });
