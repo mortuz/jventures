@@ -198,6 +198,7 @@ $(document).ready(function () {
             if (vScroll > aboutSectionScroll - $(window).height()/2) {
                 console.log('about is visible');
                 $(".who-are-we-big-image").addClass('animated fadeInLeft');
+                $(".who-are-we-content").addClass("animated fadeInRight");
             }
 
             // check if solutions section

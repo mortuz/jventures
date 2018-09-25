@@ -965,7 +965,57 @@ input[type='radio']:checked + label {
 }
 .animate {
     opacity: 0;
+    animation-duration: 1s;
 }
 .animated {
     opacity: 1;
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-timing-function: ease-in;
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+.fadeInRight {
+    animation-name: fadeInRight;
+    animation-timing-function: ease-in;
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+.fadeInBottom {
+    animation-name: fadeInBottom;
+    animation-timing-function: ease-in;
+}
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0px);
+    }
 }
