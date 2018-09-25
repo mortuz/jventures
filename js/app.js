@@ -214,6 +214,67 @@ $(document).ready(function () {
         // section scroll detection
     })
 
+    // scroll detection
+    $(window).on('scroll', function () {
+        var vScroll = $(window).scrollTop();
+
+        if (vScroll > 50) {
+            $('body').addClass('scrolled');
+
+            var whatSectionScroll = $('#what-we-do').offset().top;
+            var solutionSectionScroll = $('#solutions').offset().top;
+
+
+            // check if about section
+            if (vScroll > whatSectionScroll - $(window).height() / 2) {
+                console.log('what we do is visible');
+                $(".what-we-do-text").addClass('animated fadeInLeft');
+                $(".what-we-do-image").addClass("animated fadeInRight");
+            }
+
+            // check if solutions section
+            if (vScroll > solutionSectionScroll - $(window).height() / 2) {
+                console.log("solution is visible");
+            }
+
+        } else {
+            $("body").removeClass("scrolled");
+        }
+
+        // 
+        // section scroll detection
+    })
+
+    $(window).on('scroll', function () {
+        var vScroll = $(window).scrollTop();
+
+        if (vScroll > 50) {
+            $('body').addClass('scrolled');
+
+            var solutionSectionScroll = $('#solutions').offset().top;
+            // var solutionSectionScroll = $('#solutions').offset().top;
+
+
+            // check if about section
+            if (vScroll > solutionSectionScroll - $(window).height() / 2) {
+                console.log('solution is visible');
+                $(".item").addClass('animated fadeInBottom');
+                // $(".what-we-do-image").addClass("animated fadeInRight");
+            }
+
+            // check if solutions section
+            // if (vScroll > solutionSectionScroll - $(window).height() / 2) {
+            //     console.log("solution is visible");
+            // }
+
+        } else {
+            $("body").removeClass("scrolled");
+        }
+
+        // 
+        // section scroll detection
+    })
+
     // scrollspy
     $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
         // do something…

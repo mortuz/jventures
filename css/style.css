@@ -1010,7 +1010,7 @@ input[type='radio']:checked + label {
 @keyframes fadeInBottom {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(100px);
     }
     75% {
         opacity: 1;
