@@ -12,8 +12,10 @@ $(document).ready(function () {
     // $(".owl-carousel owl-theme").owlCarousel();
     function windowResized() {
         $('.polygon').width($('body').innerWidth());
+        $(".scroll").css('left', $("body").innerWidth() / 2);
 
     }
+    windowResized();
     $(window).on('resize', windowResized);
     // partners
     $('.js-partners').owlCarousel({
@@ -76,7 +78,7 @@ $(document).ready(function () {
     // case studies
     $('.js-case-studies').owlCarousel({
         autoplay: true,
-        loop: true,
+        loop: false,
         margin: 20,
         nav: true,
         navContainerClass: 'owl-nav case-more-nav',
@@ -97,7 +99,7 @@ $(document).ready(function () {
 
     $('.js-blog').owlCarousel({
         autoplay: true,
-        loop: true,
+        loop: false,
         margin: 10,
         responsiveClass: true,
         responsive: {
@@ -116,7 +118,7 @@ $(document).ready(function () {
 
     $('.js-team-carousel').owlCarousel({
         autoplay: true,
-        loop: true,
+        loop: false,
         margin: 20,
         responsiveClass: true,
         responsive: {
@@ -193,6 +195,10 @@ $(document).ready(function () {
             var aboutSectionScroll = $('#who-are-we').offset().top;
             var solutionSectionScroll = $('#solutions').offset().top;
             var whatSectionScroll = $("#what-we-do").offset().top;
+            var caseStudiesSectionScroll = $("#case-studies").offset().top;
+            var blogSectionScroll = $("#blog").offset().top;
+            var teamSectionScroll = $("#team").offset().top;
+            var contactSectionScroll = $("#contact").offset().top;
 
 
             // check if about section
@@ -212,7 +218,6 @@ $(document).ready(function () {
 
             // check if solution section
             if (vScroll > solutionSectionScroll - $(window).height() / 2) {
-            //   console.log("solution is visible");
                 $('#solutions .item').each(function(i) {
                     setTimeout(function () { 
                         $("#solutions .item")
@@ -221,6 +226,48 @@ $(document).ready(function () {
                     }, i * 300)
                   
               });
+            }
+
+            // check if solution section
+            if (vScroll > caseStudiesSectionScroll - $(window).height() / 2) {
+                $('#case-studies .item').each(function (i) {
+                    setTimeout(function () {
+                        $("#case-studies .item")
+                          .eq(i)
+                          .addClass("animated fadeInRight");
+                    }, i * 300)
+
+                });
+            }
+
+            // check if blog section
+            if (vScroll > blogSectionScroll - $(window).height() / 2) {
+                $('#blog .item').each(function (i) {
+                    setTimeout(function () {
+                        $("#blog .item")
+                            .eq(i)
+                            .addClass("animated fadeInBottom");
+                    }, i * 300)
+
+                });
+            }
+
+            // check if team section
+            if (vScroll > teamSectionScroll - $(window).height() / 2) {
+                $('#team .item').each(function (i) {
+                    setTimeout(function () {
+                        $("#team .item")
+                            .eq(i)
+                            .addClass("animated fadeInLeft");
+                    }, i * 300)
+
+                });
+            }
+
+            // check if contact section
+            if (vScroll > contactSectionScroll - $(window).height() / 2) {
+                $(".col-left").addClass('animated fadeInLeft');
+                $(".col-right").addClass("animated fadeInRight");
             }
 
         } else {
