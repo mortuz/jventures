@@ -192,6 +192,7 @@ $(document).ready(function () {
 
             var aboutSectionScroll = $('#who-are-we').offset().top;
             var solutionSectionScroll = $('#solutions').offset().top;
+            var whatSectionScroll = $("#what-we-do").offset().top;
 
 
             // check if about section
@@ -201,63 +202,25 @@ $(document).ready(function () {
                 $(".who-are-we-content").addClass("animated fadeInRight");
             }
 
-            // check if solutions section
-            if (vScroll > solutionSectionScroll - $(window).height() / 2) {
-                console.log("solution is visible");
-            }
-
-        } else {
-            $("body").removeClass("scrolled");
-        }
-
-        // 
-        // section scroll detection
-    })
-
-    // scroll detection
-    $(window).on('scroll', function () {
-        var vScroll = $(window).scrollTop();
-
-        if (vScroll > 50) {
-            $('body').addClass('scrolled');
-
-            var whatSectionScroll = $('#what-we-do').offset().top;
-            var solutionSectionScroll = $('#solutions').offset().top;
-
-
             // check if about section
             if (vScroll > whatSectionScroll - $(window).height() / 2) {
-                console.log('what we do is visible');
-                $(".what-we-do-text").addClass('animated fadeInLeft');
-                $(".what-we-do-image").addClass("animated fadeInRight");
+              console.log("what we do is visible");
+              $(".what-we-do-text").addClass("animated fadeInLeft");
+              $(".what-we-do-image").addClass("animated fadeInRight");
             }
-
-            // check if solutions section
-            if (vScroll > solutionSectionScroll - $(window).height() / 2) {
-                console.log("solution is visible");
-            }
-
-        } else {
-            $("body").removeClass("scrolled");
-        }
-
-        // 
-        // section scroll detection
-    })
-
-    $(window).on('scroll', function () {
-        var vScroll = $(window).scrollTop();
-
-        if (vScroll > 50) {
-            $('body').addClass('scrolled');
-
-            var solutionSectionScroll = $('#solutions').offset().top;
 
 
             // check if solution section
             if (vScroll > solutionSectionScroll - $(window).height() / 2) {
-                console.log('solution is visible');
-                $(".item").addClass('animated fadeInBottom');
+            //   console.log("solution is visible");
+                $('#solutions .item').each(function(i) {
+                    setTimeout(function () { 
+                        $("#solutions .item")
+                          .eq(i)
+                          .addClass("animated fadeInRight");
+                    }, i * 300)
+                  
+              });
             }
 
         } else {
@@ -267,6 +230,7 @@ $(document).ready(function () {
         // 
         // section scroll detection
     })
+
 
     // scrollspy
     $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {

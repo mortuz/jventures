@@ -966,7 +966,7 @@ input[type='radio']:checked + label {
 }
 .animate {
     opacity: 0;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 .animated {
     opacity: 1;
@@ -974,7 +974,7 @@ input[type='radio']:checked + label {
 
 .fadeInLeft {
     animation-name: fadeInLeft;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
 }
 @keyframes fadeInLeft {
     from {
@@ -990,7 +990,7 @@ input[type='radio']:checked + label {
 }
 .fadeInRight {
     animation-name: fadeInRight;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
 }
 @keyframes fadeInRight {
     from {
@@ -1006,7 +1006,7 @@ input[type='radio']:checked + label {
 }
 .fadeInBottom {
     animation-name: fadeInBottom;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
 }
 @keyframes fadeInBottom {
     from {
