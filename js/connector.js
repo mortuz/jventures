@@ -147,6 +147,7 @@
 
   //fetch case studides
   var caseCarousel;
+  var currentId = 2;
   var fetchCaseStudies = function(id) {
     $.ajax({
       url: "http://jventures.pk/backend/wp-json/wp/v2/posts?_embed",
@@ -154,14 +155,23 @@
       type: "get",
       success: function(data) {
         console.log(data);
+          var animateClass = "";
+
+          if (id == 2) {
+              if (currentId == 2)
+                  animateClass = 'animate';
+              else
+                  animateClass = 'animated fadeInRight';
+          } else {
+              animateClass = 'animated fadeInRight';
+          }
         
         var html = '';
         for (let i = 0; i < data.length; i++) {
-          var animateClass = '';
           const item = data[i];
-          if (id == 2) {
-            animateClass = 'animate';
-          }
+          
+
+          currentId = id;
           var title = item.title.rendered;
           var content = $(item.content.rendered).text().substr(0, 150);
           var image = item._embedded['wp:featuredmedia'][0].source_url;
@@ -182,10 +192,10 @@
 
         $('.js-case-studies').html(html);
 
-        if(id !=2) {
+        // if(id !=2) {
           $(".js-case-studies").trigger("destroy.owl.carousel");
           // return;
-        }
+        // }
 
         caseCarousel = $(".js-case-studies");
         caseCarousel.owlCarousel({
@@ -223,6 +233,7 @@
     $('.js-case-studies-tab').find('.active').removeClass('active');
     $(this).addClass('active');
     var id = $(this).attr('data-id');
+    // currentId = id;
     fetchCaseStudies(id);
     // caseCarousel.destroy();
   });
