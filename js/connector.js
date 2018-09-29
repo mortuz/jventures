@@ -14,7 +14,7 @@
 
   $.ajax({
     url: "http://jventures.pk/backend/wp-json/wp/v2/posts",
-    data: JSON.stringify({ categories: 5 }),
+    data: { categories: 5 },
     type: 'get',
     success: function(data) {
       // console.log(data);
@@ -74,4 +74,157 @@
         console.error('FETCH_SOLUTIONS_ERR:', err);
     }
   });
+
+  //fetch blog
+  $.ajax({
+    url: "http://jventures.pk/backend/wp-json/wp/v2/posts?_embed",
+    data: { categories: 4 },
+    type: "get",
+    success: function(data) {
+      // console.log(data);
+
+      var html = '';
+
+      for (let i = 0; i < data.length; i++) {
+        const article = data[i];
+
+        var title = article.title.rendered;
+        var excerpt = $(article.excerpt.rendered).text().substr(0, 150);
+        var image = article._embedded['wp:featuredmedia'][0].source_url;
+        
+        html += `
+          <div class="item text-center animate">
+            <!-- Featured image -->
+            <div class="view overlay rounded z-depth-2 mb-4">
+                <img class="img-fluid" src="${image}"
+                    alt="Sample image">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+
+            <!-- Post title -->
+            <h5 class="font-weight-normal mb-3 small-text">
+                ${title}
+            </h5>
+            <!-- Excerpt -->
+            <div class="small-text">
+                <p><small>${excerpt}</small></p>
+
+            </div>
+            <!-- Read more button -->
+            <a class="btn-link heading-text" href="/article/11"><small>Read more</small></a>
+          </div>
+        `;
+      }
+
+      $('.js-blog').html(html);
+
+      $('.js-blog').owlCarousel({
+        autoplay: true,
+        loop: false,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          1000: {
+            items: 4,
+            margin: 20
+          }
+        }
+      });
+    },
+    error: function(err) {
+      console.error("FETCH_TEAM_ERR:", err);
+    }
+  });
+
+  //fetch case studides
+  var caseCarousel;
+  var fetchCaseStudies = function(id) {
+    $.ajax({
+      url: "http://jventures.pk/backend/wp-json/wp/v2/posts?_embed",
+      data: { categories: id },
+      type: "get",
+      success: function(data) {
+        console.log(data);
+        
+        var html = '';
+        for (let i = 0; i < data.length; i++) {
+          var animateClass = '';
+          const item = data[i];
+          if (id == 2) {
+            animateClass = 'animate';
+          }
+          var title = item.title.rendered;
+          var content = $(item.content.rendered).text().substr(0, 150);
+          var image = item._embedded['wp:featuredmedia'][0].source_url;
+
+          html += `
+            <div class="item ${animateClass}">
+              <div class="card">
+                  <img class="card-img-top" src="${image}" alt="Card image cap">
+                  <div class="card-body">
+                      <h6 class="card-title text-uppercase small-text">${title}</h6>
+                      <p class="card-text small-text"><small>${content}</small></p>
+                      <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
+                  </div>
+              </div>
+            </div>
+          `;
+        }
+
+        $('.js-case-studies').html(html);
+
+        if(id !=2) {
+          $(".js-case-studies").trigger("destroy.owl.carousel");
+          // return;
+        }
+
+        caseCarousel = $(".js-case-studies");
+        caseCarousel.owlCarousel({
+          autoplay: true,
+          loop: false,
+          margin: 20,
+          nav: true,
+          navContainerClass: "owl-nav case-more-nav",
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
+      },
+      error: function(err) {
+        console.error('FETCH_CASE_STUDIES_ERR:', err);
+      }
+    })
+  }
+
+  fetchCaseStudies(2);
+
+  // change case studies
+
+  $(".js-case-studies-tab").on('click', 'a', function(e){
+    e.preventDefault();
+    $('.js-case-studies-tab').find('.active').removeClass('active');
+    $(this).addClass('active');
+    var id = $(this).attr('data-id');
+    fetchCaseStudies(id);
+    // caseCarousel.destroy();
+  });
+
 })(jQuery)

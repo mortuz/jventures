@@ -76,45 +76,44 @@ $(document).ready(function () {
     });
 
     // case studies
-    $('.js-case-studies').owlCarousel({
-        autoplay: true,
-        loop: false,
-        margin: 20,
-        nav: true,
-        navContainerClass: 'owl-nav case-more-nav',
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            1000: {
-                items: 3,
-                // margin: 20
-            }
-        }
-    });
+    // $('.js-case-studies').owlCarousel({
+    //     autoplay: true,
+    //     loop: false,
+    //     margin: 20,
+    //     nav: true,
+    //     navContainerClass: 'owl-nav case-more-nav',
+    //     responsiveClass: true,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //         },
+    //         768: {
+    //             items: 2,
+    //         },
+    //         1000: {
+    //             items: 3,
+    //         }
+    //     }
+    // });
 
-    $('.js-blog').owlCarousel({
-        autoplay: true,
-        loop: false,
-        margin: 10,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            1000: {
-                items: 4,
-                margin: 20
-            }
-        }
-    });
+    // $('.js-blog').owlCarousel({
+    //     autoplay: true,
+    //     loop: false,
+    //     margin: 10,
+    //     responsiveClass: true,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //         },
+    //         768: {
+    //             items: 2,
+    //         },
+    //         1000: {
+    //             items: 4,
+    //             margin: 20
+    //         }
+    //     }
+    // });
 
     $('.js-team-carousel').owlCarousel({
         autoplay: true,
@@ -203,14 +202,14 @@ $(document).ready(function () {
 
             // check if about section
             if (vScroll > aboutSectionScroll - $(window).height()/2) {
-                console.log('about is visible');
+                // console.log('about is visible');
                 $(".who-are-we-big-image").addClass('animated fadeInLeft');
                 $(".who-are-we-content").addClass("animated fadeInRight");
             }
 
             // check if about section
             if (vScroll > whatSectionScroll - $(window).height() / 2) {
-              console.log("what we do is visible");
+            //   console.log("what we do is visible");
               $(".what-we-do-text").addClass("animated fadeInLeft");
               $(".what-we-do-image").addClass("animated fadeInRight");
             }
