@@ -154,7 +154,7 @@
       data: { categories: id },
       type: "get",
       success: function(data) {
-        console.log(data);
+        // console.log(data);
           var animateClass = "";
 
           if (id == 2) {
@@ -167,15 +167,34 @@
           }
         
         var html = '';
+        var links = [];
         for (let i = 0; i < data.length; i++) {
           const item = data[i];
+          links = item.content.rendered.match(/href="([^"]*")/g);
+          if (links != null) {
+            // links = $(links).replace("href=", "");
+            
+            if (links && links.length) {
+              links = links[0].replace("href=", "");
+              links.split('"').join('');
+              // console.log(links)
+            } 
+          } else {
+            links = '#';
+          }
           
-
+          
           currentId = id;
           var title = item.title.rendered;
-          var content = $(item.content.rendered).text().substr(0, 150);
-          var image = item._embedded['wp:featuredmedia'][0].source_url;
+          var content = $(item.content.rendered)
+            .empty("a")
+            .text()
+            .substr(0, 120);
 
+            // console.log(content)
+          var image = item._embedded['wp:featuredmedia'][0].source_url;
+          
+          console.log(links);
           html += `
             <div class="item ${animateClass}">
               <div class="card">
@@ -183,7 +202,7 @@
                   <div class="card-body">
                       <h6 class="card-title text-uppercase small-text">${title}</h6>
                       <p class="card-text small-text"><small>${content}</small></p>
-                      <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
+                      <a href=${links} target="_blank" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
                   </div>
               </div>
             </div>
