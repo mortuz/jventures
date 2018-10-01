@@ -554,6 +554,10 @@ img{
     font-size: 14px;
     color: var(--primary-color);
 }
+
+.text-mail{
+    color: var(--primary-color);
+}
 /* .owl-stage-outer { 
     padding: 30px;
     margin: 30px;
