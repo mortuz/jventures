@@ -9,7 +9,13 @@
     /* --box-shadow:  4px 7px 58px 0px rgba(111,111,111,0.2); */
     /* --box-shadow:  4px 7px 58px 0px rgba(8,113,222,0.2); */
 }
-
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
+}
 .head1{
     color: #181b3a;
 }

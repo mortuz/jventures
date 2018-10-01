@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" /> -->
     <link rel="stylesheet" href="./css/style.css">
 
     <title>Jventures</title>
@@ -518,6 +517,7 @@
                 </ul>
             </div>
         </nav>
+        <canvas id="map"></canvas>
         <!--/navbar-->
         <div class="bg">
             <div class="polygon"></div>
@@ -528,10 +528,11 @@
             <polygon points="0 0 0 176.15 195.56 202.43 222.77 0 0 0" style="fill:#fff" /></svg>
 
 
+            
         <!--hero section text-->
         <div class="container-fluid hero">
-            <div class="row vertical-center height-500">
-                <div class="col-md-6">
+            <div class="row vertical-center height-500 mt-5">
+                <div class="col-md-12 text-center">
                     <div class="content">
                         <h1 class="h3 heading text-uppercase">Innovative. Creative. Digital.</h1>
                         <!-- <h3 class="h1 heading font-gotham text-uppercase">CEO OR CFO?</h3> -->
@@ -544,7 +545,6 @@
 
                 </div>
                 <div class="col-md-6">
-                    <!-- <img src="./assets/img/hero-img.svg" alt="hero image" class="hero-img"> -->
                 </div>
             </div>
         </div>
@@ -1553,84 +1553,6 @@
                 <div class="col-md-10">
                     <div class="owl-carousel js-case-studies">
 
-                        <!-- <div class="item animate">
-                            <div class="card">
-                                <img class="card-img-top" src="https://placekitten.com/g/400/300" alt="Card image cap">
-                                <div class="card-body">
-                                    <h6 class="card-title text-uppercase small-text">Lorem ipsum</h6>
-                                    <p class="card-text small-text"><small>Category: Automotive</small></p>
-                                    <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item animate">
-                            <div class="card">
-                                <img class="card-img-top" src="https://placekitten.com/g/400/300" alt="Card image cap">
-                                <div class="card-body">
-                                    <h6 class="card-title text-uppercase small-text">Lorem ipsum</h6>
-                                    <p class="card-text small-text"><small>Category: Automotive</small></p>
-                                    <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item animate">
-                            <div class="card">
-                                <img class="card-img-top" src="https://placekitten.com/g/400/300" alt="Card image cap">
-                                <div class="card-body">
-                                    <h6 class="card-title text-uppercase small-text">Lorem ipsum</h6>
-                                    <p class="card-text small-text"><small>Category: Automotive</small></p>
-                                    <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item animate">
-                            <div class="card">
-                                <img class="card-img-top" src="https://placekitten.com/g/400/300" alt="Card image cap">
-                                <div class="card-body">
-                                    <h6 class="card-title text-uppercase small-text">Lorem ipsum</h6>
-                                    <p class="card-text small-text"><small>Category: Automotive</small></p>
-                                    <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item animate">
-                            <div class="card">
-                                <img class="card-img-top" src="https://placekitten.com/g/400/300" alt="Card image cap">
-                                <div class="card-body">
-                                    <h6 class="card-title text-uppercase small-text">Lorem ipsum</h6>
-                                    <p class="card-text small-text"><small>Category: Automotive</small></p>
-                                    <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item animate">
-                            <div class="card">
-                                <img class="card-img-top" src="https://placekitten.com/g/400/300" alt="Card image cap">
-                                <div class="card-body">
-                                    <h6 class="card-title text-uppercase small-text">Lorem ipsum</h6>
-                                    <p class="card-text small-text"><small>Category: Automotive</small></p>
-                                    <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item animate">
-                            <div class="card">
-                                <img class="card-img-top" src="https://placekitten.com/g/400/300" alt="Card image cap">
-                                <div class="card-body">
-                                    <h6 class="card-title text-uppercase small-text">Lorem ipsum</h6>
-                                    <p class="card-text small-text"><small>Category: Automotive</small></p>
-                                    <a href="#" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
-                                </div>
-                            </div>
-                        </div> -->
-
-
                     </div>
                 </div>
 
@@ -1993,8 +1915,11 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="./js/connector.js"></script>
     <script src="js/app.js"></script>
+    <script src="./js/canvas.js"></script>
 
 </body>
 
