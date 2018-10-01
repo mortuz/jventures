@@ -466,6 +466,8 @@ img{
 #team .item {
     margin: 35px 30px 40px 0px;
     box-shadow: var(--box-shadow);
+    max-width: 300px;
+
 }
 .people {
     /* border: 1px solid rgba(0,0,0, 0.1); */
@@ -484,12 +486,11 @@ img{
     height: auto;
 }
 .people:hover .people-content {
-    height: 200px;
+    height: auto;
 }
 .people-img {
     position: relative;
     overflow: hidden;
-    background: url(https://media.tenor.com/images/a1228ad71951d963835e3ed1f2514cdc/tenor.gif) center center no-repeat;
     background-size: cover;
     height: 200px;
 }
@@ -525,11 +526,11 @@ img{
 }
 .people-content .info, 
 .people-content .description {
-    position: absolute;
     width: calc(100% - 20px);
 }
 
 .people-content .info {
+    position: absolute;
     opacity: 1;
     background-color: #fff;
     transform: translateY(0px);
