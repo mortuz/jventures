@@ -81,7 +81,7 @@
     data: { categories: 4 },
     type: "get",
     success: function(data) {
-      // console.log(data);
+      console.log(data);
 
       var html = '';
 
@@ -114,7 +114,7 @@
 
             </div>
             <!-- Read more button -->
-            <a class="btn-link heading-text" href="/article/11"><small>Read more</small></a>
+            <a class="btn-link heading-text" target="_blank" href="/blog.html?id=${article.id}"><small>Read more</small></a>
           </div>
         `;
       }

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" /> -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Jventures</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-light bg-light" id="topnav">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="./img/logo.png">
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <article class="article mt-5 pb-5" style="min-height: 800px">
+
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+        function getUrlParam(parameter) {
+            var urlparameter = '';
+            if (window.location.href.indexOf(parameter) > -1) {
+                urlparameter = getUrlVars()[parameter];
+            }
+            return urlparameter;
+        }
+        console.log(getUrlParam('id'));
+
+        var id = getUrlParam('id');
+
+        $.ajax({
+            url: "http://jventures.pk/backend/wp-json/wp/v2/posts/"+ id +"?_embed",
+            type: "get",
+            success: function(article) {
+                console.log(article);
+                var title = article.title.rendered;
+                var image = article._embedded['wp:featuredmedia'][0].source_url;
+                var content = article.content.rendered;
+
+                var html = `
+                <h2 class="heading-text">${title}</h2>
+                <img src="${image}" class="my-3">
+                <div>${content}</div>
+                `;
+
+                $('.article').html(html);
+                $('body').css('overflow-y', 'scroll');
+            },
+            error: function(err) {
+                console.error('FETCH_ARTICLE_ERR:', err);
+            }
+        })
+    </script>
+</body>
+
+</html>
