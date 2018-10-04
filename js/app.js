@@ -12,8 +12,9 @@ $(document).ready(function () {
     // $(".owl-carousel owl-theme").owlCarousel();
     function windowResized() {
         $('.polygon').width($('body').innerWidth());
-        $(".scroll").css('left', $("body").innerWidth() / 2);
-
+        $('.scroll').width($('body').innerWidth());
+        // $(".scroll").width('left', $("body").innerWidth() / 2);
+        console.log('ee ')
     }
     windowResized();
     $(window).on('resize', windowResized);
@@ -282,5 +283,16 @@ $(document).ready(function () {
     $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
         // do something…
         console.log($(this));
-    })
+    });
+
+    // import Typed from 'typed.js';
+
+    var options = {
+        strings: ["INNOVATION.", "CREATIVE.", "DIGITAL"],
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100
+    }
+
+    var typed = new Typed(".heading", options);
 });
