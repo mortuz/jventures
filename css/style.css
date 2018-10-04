@@ -988,6 +988,16 @@ input[type='radio']:checked + label {
     animation-name: fadeInLeft;
     animation-timing-function: ease-in-out;
 }
+.text-mail {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 0.8em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -1041,27 +1051,7 @@ input[type='radio']:checked + label {
     }
 }
 
-.bg-text {
-    color: rgba(255,255,255,.15);
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    white-space: nowrap;
-    transform: translate(0%, -50%);
-    z-index: -1;
-    text-transform: uppercase;
-    font-size: 34.375em;
-    font-size: 32vw;
-    font-weight: 500;
-}
-.bg-text-inner {
-    display: block;
-    animation: textSlide 40s linear infinite;
-    width: auto;
-    max-width: none;
-    white-space: nowrap;
-    display: inline-block;
-}
+
 .arrow-down {
     /* transform: rotate(45deg); */
     position: absolute;
